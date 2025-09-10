@@ -1,15 +1,18 @@
-# Byte-compiled / optimized / DLL files
+# Ignore Python cache files
 __pycache__/
-*.py[cod]
-*$py.class
+*.pyc
+*.pyo
+*.pyd
 
-# Virtual environment
+# Ignore virtual environments
 venv/
-.env/
+ENV/
+env/
+.venv/
 
-# Logs and databases
-*.log
-*.sqlite3
-
-# VS Code settings
+# Ignore VS Code settings
 .vscode/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
