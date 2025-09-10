@@ -1,18 +1,21 @@
-# Ignore Python cache files
+# Python cache files
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
 
-# Ignore virtual environments
+# Virtual environments
 venv/
-ENV/
-env/
 .venv/
+env/
+ENV/
 
-# Ignore VS Code settings
+# Logs and databases
+*.log
+*.sqlite3
+
+# VS Code settings
 .vscode/
 
-# Ignore OS files
+# OS files
 .DS_Store
 Thumbs.db
