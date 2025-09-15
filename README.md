@@ -1,3 +1,17 @@
-# My Learning: Python for DevOps
+# Jenkins Pipeline
 
-This repository contains my daily learning journey of **Python for DevOps**.
+Pipeline {
+    agent any {
+        stages {
+            stage('Build') {
+                steps {
+                    echo 'Building'
+                }
+            }
+            stage('Test') {
+                echo 'Testing'
+            }
+        }
+    }
+}
+
