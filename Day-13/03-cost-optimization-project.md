@@ -143,7 +143,7 @@
   - **Boto3 Tips:** Docs provide syntax/response JSON. Parse with loops/sets (Python basics). Use try-except for errors.
   - **Customization:** Add SNS notifications; extend to S3/RDS/EKS. Vary per org (e.g., archive to S3 Glacier instead of delete).
 
-## Key Takeaways for Day 18
+## Key Takeaways
 
   - **Project Value:** Add to resume (explain: "Automated EBS cost optimization via Lambda/Boto3; reduced stale resource costs").
   - **Costs:** Delete test resources; Lambda charges ms-based (keep timeout low).
