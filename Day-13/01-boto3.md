@@ -59,16 +59,16 @@
 - **Core Syntax:**
     - **Client Mode** (Recommended; low-level, supports all services):
     ```python
-        client = boto3.client('s3')  # Replace 's3' with service (e.g., 'ec2').
+    client = boto3.client('s3')  # Replace 's3' with service (e.g., 'ec2').
     response = client.create_bucket(Bucket='my-unique-bucket-name')
     ```
     - Client specifies the AWS service (e.g., S3, EC2) to interact with APIs.
     - Use for new services; abstracts API calls.
 - **Resource Mode** (High-level abstraction; easier but deprecated for new services):
   ```python
-      s3 = boto3.resource('s3')
-    bucket = s3.create_bucket(Bucket='my-bucket')
-    ```
+  s3 = boto3.resource('s3')
+  bucket = s3.create_bucket(Bucket='my-bucket')
+  ```
     - Simpler syntax but avoid for future-proofing.
 - **Documentation:** 
     - Boto3 Docs: [boto3.amazonaws.com](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html). Search service (e.g., S3) > Available Services > Code examples for actions (e.g., `create_bucket`). 
@@ -83,22 +83,22 @@
 
 1. **Create S3 Bucket (`test.py`):**
   ```python
-     import boto3
-   client = boto3.client('s3')
-   response = client.create_bucket(Bucket='abi-demo-boto3-youtube-123')  # Unique name required.
-   print(response)
-   ```
+  import boto3
+  client = boto3.client('s3')
+  response = client.create_bucket(Bucket='abi-demo-boto3-youtube-123')  # Unique name required.
+  print(response)
+  ```
   - Run: `python test.py`.
   - Verify: AWS Console > S3 > Buckets.
   - Tip: Bucket names must be globally unique; add random suffix.
 
 2. **Get S3 Bucket ACL:**
   ```python
-     import boto3
-   client = boto3.client('s3')
-   response = client.get_bucket_acl(Bucket='abi-demo-boto3-youtube-123')
-   print(response)  # JSON output; parse to dict for actions (e.g., owner info).
-   ```
+  import boto3
+  client = boto3.client('s3')
+  response = client.get_bucket_acl(Bucket='abi-demo-boto3-youtube-123')
+  print(response)  # JSON output; parse to dict for actions (e.g., owner info).
+  ```
   - Parse JSON: Use loops/dicts (from Day 11 GitHub API notes).
 
 - **General Workflow:**
